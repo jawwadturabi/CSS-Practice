@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 100%;
+            align-items: center;
+        }
+
+        div div {
+            padding: 1%;
+            flex-basis: 30%;
+            border: 1px solid black;
+        }
+
+        .flexone {
+            background-color: lightgray;
+        }
+
+        .flextwo {
+            background-color: lightblue;
+        }
+
+        .flexthree {
+            background-color: lightgreen;
+        }
+
+        @media (min-width: 768px) {
+            div {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flexible Box</h1>
+    <div>
+        <div class="flexone">
+            The flex property is a sub-property of the Flexible Box Layout module.
+            This is the shorthand for flex-grow, flex-shrink and flex-basis. The second and third parameters
+            (flex-shrink and
+            flex-basis) are optional.
+        </div>
+        <div class="flextwo">
+            The flex CSS shorthand property sets how a flex item will grow or shrink to fit the space available in its
+            flex
+            container.
+            The item is sized according to its width and height properties, but grows to absorb any extra free space in
+            the flex
+            container, and shrinks to its minimum size to fit the container. This is equivalent to setting "flex: 1 1
+            auto".
+        </div>
+        <div class="flexthree">
+            Defines the flex-grow of the flex item. Negative values are considered invalid. Defaults to 1 when omitted.
+        </div>
+    </div>
+    <!-- <iframe
+        src='https://webchat.botframework.com/embed/Survey-Bot-Dialogflow?s=lKvhitwvpzk.mzHNJRQkisXUrG3oILIMsj0o9d0cq1wc45k39EB8E9w'
+        style='min-width: 400px; width: 100%; min-height: 500px;'></iframe> -->
+
+</body>
+
+
+</html>
